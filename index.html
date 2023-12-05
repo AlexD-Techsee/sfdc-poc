@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRM - Hosting app</title>
+    <style>
+        .demo {
+            display: flex;
+        }
+
+        #tsl-container, #cp-container {
+            display: flex;
+            flex: 1 0 50%;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        #tsl-container {
+            background: azure;
+        }
+
+        #cp-container {
+            background: bisque;
+        }
+    </style>
+</head>
+<body>
+<h1>CRM - Hosting app (AKA Salesforce)</h1>
+<br/>
+<button onclick="initCopilot()">Create Copilot Iframe</button>
+<button onclick="initTSL()">Create TSL Iframe</button>
+<br/>
+<br/>
+<div class="demo">
+    <div id="tsl-container">
+
+    </div>
+    <div id="cp-container">
+
+    </div>
+</div>
+<script src="sfdc-package.js" type="application/javascript"></script>
+<script src="copilot-sdk.js" type="application/javascript"></script>
+</body>
+</html>
