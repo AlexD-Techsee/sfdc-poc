@@ -11,6 +11,9 @@ function sendMessage() {
 
 window.addEventListener('message', (m) => {
     if (m.data.source === 'TSL') {
+        const el = document.createElement('div');
+        el.innerText = "Message from Live" + JSON.stringify(m.data);
+        document.getElementById('out').append(el)
         console.log("Message from Live", m.data);
     }
 })

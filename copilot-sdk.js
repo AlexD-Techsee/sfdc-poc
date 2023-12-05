@@ -11,6 +11,9 @@ window.addEventListener('message', (m) => {
         const cpIframe = document.getElementById('ifr-cp');
         cpIframe.contentWindow.postMessage(m.data);
     } else if (m.data.source === 'CP') {
+        const el = document.createElement('div');
+        el.innerText = "Message from Copilot" + JSON.stringify(m.data);
+        document.getElementById('out').append(el)
         console.log("message from copilot to SDK", m.data);
     }
 })
